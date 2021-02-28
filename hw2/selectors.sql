@@ -1,0 +1,16 @@
+USE library;
+SELECT * FROM book;
+SELECT * FROM book WHERE id IN (5,10,13);
+SELECT title FROM book WHERE pages > 150;
+SELECT title FROM book WHERE rewards IS NULL;
+SELECT title, author_email FROM book WHERE author_email = 'kyrylov.olexandr@gmail.com';
+SELECT title, isbn FROM book WHERE isbn = '2121-45643-1';
+SELECT title, category FROM book WHERE category = 'Роман';
+SELECT title, category FROM book WHERE category = 'Комедія' OR category = 'Драма';
+SELECT title FROM book ORDER BY title ASC;
+SELECT title, author_email FROM book ORDER BY author_email ASC;
+SELECT title, pages FROM book ORDER BY pages ASC;
+SELECT DISTINCT category FROM book;
+SELECT DISTINCT author_name, author_surname FROM book;
+SELECT title, publication_date FROM book WHERE publication_date > '2010-01-01';
+SELECT title, publication_date FROM book WHERE publication_date < '2010-01-01';
